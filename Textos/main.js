@@ -4,6 +4,7 @@ const templateSelect = document.getElementById("templateSelect");
 const inputsContainer = document.getElementById("inputsContainer");
 const gerarBtn = document.getElementById("gerarBtn");
 const resultadoDiv = document.getElementById("resultado");
+const copiarBtn = document.getElementById("copiarBtn");
 
 // Renderiza a lista de templates
 function renderTemplateList(templates) {
@@ -20,7 +21,7 @@ function renderForm(template) {
   inputsContainer.innerHTML = "";
   const camposMap = {};
 
-  // Primeiro: cria apenas os campos que não são "dependente"
+  // Cria campos
   template.campos.forEach(campo => {
     if (campo.tipo === "dependente") return;
 
@@ -47,6 +48,7 @@ function renderForm(template) {
     inputsContainer.appendChild(input);
   });
 
+  // Adiciona lógica para campos dependentes
   template.campos
     .filter(campo => campo.tipo === "dependente")
     .forEach(dep => {
@@ -57,7 +59,6 @@ function renderForm(template) {
         const valorPai = campoPai.value;
         const valorDependente = dep.valores[valorPai];
         if (valorDependente !== undefined) {
-          // Cria um input oculto só na hora de gerar o texto
           camposMap[dep.chave] = { value: valorDependente };
         }
       });
@@ -85,6 +86,8 @@ function generateResult(template) {
     textoFinal = textoFinal.replace(regex, valor);
   }
 
+  console.log("Texto Final gerado: ", textoFinal);
+
   if (template.tipo === "xmlDownload") {
     const blob = new Blob([textoFinal], { type: "application/xml" });
     const link = document.createElement("a");
@@ -93,11 +96,35 @@ function generateResult(template) {
     link.download = nomeArquivo;
     link.click();
     URL.revokeObjectURL(link.href);
-    resultadoDiv.textContent = `Arquivo "${nomeArquivo}" gerado com sucesso.`;
+    resultadoDiv.innerHTML = `Arquivo "${nomeArquivo}" gerado com sucesso.`;
   } else {
-    resultadoDiv.textContent = textoFinal;
+    resultadoDiv.innerHTML = textoFinal;
+  }
+
+  // Mostrar o botão de copiar somente se o texto final não estiver vazio
+  if (textoFinal.trim()) {
+    copiarBtn.style.visibility = "visible"; // Exibe o botão
+    console.log("Botão de copiar visível.");
+  } else {
+    copiarBtn.style.visibility = "hidden"; // Oculta o botão
+    console.log("Botão de copiar oculto.");
   }
 }
+
+// Verifica se o botão de copiar está sendo acessado corretamente
+copiarBtn.addEventListener("click", () => {
+  const textoParaCopiar = resultadoDiv.textContent;
+
+  console.log("Texto para copiar: ", textoParaCopiar); // Verificação adicional
+
+  navigator.clipboard.writeText(textoParaCopiar)
+    .then(() => {
+      alert("Texto copiado para a área de transferência!");
+    })
+    .catch(err => {
+      console.error("Erro ao copiar texto: ", err);
+    });
+});
 
 // Eventos
 templateSelect.addEventListener("change", () => {

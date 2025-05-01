@@ -1,77 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html, head, body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
 
-    margin: 0;
-    padding: 0;
-    
-    font-size: 16px;
-  }
+header {
+  background-color: rgb(255, 145, 0);
+  padding: 0.1em;
+}
+header h1 {
+  font-size: 2em;
+  text-align: center;
+}
 
-  header {
-    background-color: rgb(255, 145, 0);
+#DisplayFlex {
+  display: flex;
+  height: 85vh;
+}
 
-    width: 100%;
-    height: 4em;
+#main-content {
+  height: 95ch;
+  min-width: 36vw;
+  margin: 0 1em;
+  overflow-y: auto;
+}
 
-  } header h1 {
-    font-size: 2em;
-    text-align: center;
+select, input, button {
+  display: block;
+  margin: 0.8em auto;
+  padding: 0.2em;
+  width: 18em;
+  height: 2.5em;
+  font-size: 0.9em;
+}
 
-    padding: 0.5rem;
-    margin: 0;
-  }
+#inputsContainer label {
+  display: block;
+  width: 100%;
+  padding: 0.2em 0;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
 
-  #main-content { 
+#gerarBtn {
+  background-color: rgba(127, 255, 212, 0.658);
+  margin: 2.7em auto;
+  height: 4em;
+  font-size: 0.8em;
+  border-radius: 7%;
+  border-width: 0.01em;
+}
+#gerarBtn #gerarBtn:hover {
+  border-width: 0.12em;
+  font-size: 0.9em;
+  background-color: rgb(198, 246, 255);
+}
+
+#divResultado {
+  display: block;
+  position: relative;
+  white-space: pre-wrap;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  padding: 0.4em;
+  width: 100%;
+  height: 100%;
+  text-align: justify;
+  font-weight: 1em;
+  overflow-y: auto;
+}
+#divResultado #resultado {
+  height: auto;
+  width: 93%;
+  margin: 0 auto;
+  font-size: 0.95em;
+}
+#divResultado #copiarBtn {
+  display: flex;
+  visibility: hidden;
+  width: 5em;
+  margin: 0.1em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+#divResultado #copiarBtn :hover {
+  border: 2px, solid, black;
+}
+#divResultado #copiarBtn img {
+  width: 100%;
+  height: 100%;
+}
+#divResultado #copiarBtn.visible {
+  visibility: visible;
+}
+
+@media only screen and (max-width: 768px) {
+  #main-content {
     height: auto;
-    width: 100%;
-
-    margin: auto;
   }
-  
+  #DisplayFlex {
+    display: block;
+    height: auto;
+  }
   select, input, button {
-    display: block;
-    
-    margin: .8em auto;
-    padding: .2em;
-
-    width: 18em;
-    height: 2.5em;
-
-    font-size: 0.9em;
-
-  } #inputsContainer label {
-    display: block;
-
-    width: 100%;
-    padding: .2em 0;
-
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: bold;
+    margin: 0.6em auto;
+    padding: 0.3em;
+    width: 16em;
+    height: 2em;
   }
-  
-  #gerarBtn {
-    background-color: rgba(127, 255, 212, 0.658);
-
-    margin: 3em auto;
-
-    height: 4em;
-    font-size: .8em;
-
-    border-radius: 7%;
-    border-width: 0.01em;
-  }
-  #gerarBtn:hover {
-    border-width: 0.12em;
-    font-size: .9em;
-    background-color: rgb(198, 246, 255);
-  }
-
-  #resultado {
-    margin-top: 1.8em;
-    white-space: pre-wrap;
-    border: 1px solid #ccc;
-    padding: 15px;
-    background: #f9f9f9;
-  }
-  
+}/*# sourceMappingURL=Styles.css.map */
