@@ -47,7 +47,6 @@ function renderForm(template) {
     inputsContainer.appendChild(input);
   });
 
-  // Lógica dos campos dependentes
   template.campos
     .filter(campo => campo.tipo === "dependente")
     .forEach(dep => {
@@ -65,7 +64,6 @@ function renderForm(template) {
     });
 }
 
-// Gera o texto final com base nos campos preenchidos
 function generateResult(template) {
   const respostas = {};
   template.campos.forEach(campo => {
@@ -87,7 +85,18 @@ function generateResult(template) {
     textoFinal = textoFinal.replace(regex, valor);
   }
 
-  resultadoDiv.textContent = textoFinal;
+  if (template.tipo === "xmlDownload") {
+    const blob = new Blob([textoFinal], { type: "application/xml" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    const nomeArquivo = `${respostas["NomeWifi"] || "config"}.xml`;
+    link.download = nomeArquivo;
+    link.click();
+    URL.revokeObjectURL(link.href);
+    resultadoDiv.textContent = `Arquivo "${nomeArquivo}" gerado com sucesso.`;
+  } else {
+    resultadoDiv.textContent = textoFinal;
+  }
 }
 
 // Eventos
