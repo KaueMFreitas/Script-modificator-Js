@@ -870,7 +870,7 @@ Declaro ainda, para os devidos fins, que tive pr√©vio acesso a todas as informa√
 <Value Name="rs2IpAddr" Value="0.0.0.0"/>\n
 <Value Name="rs2Password" Value=""/>\n
 <Value Name="wlanDisabled" Value="0"/>\n
-    <Value Name="ssid" Value="MC NET - {nome do wifi} 5G"/>\n
+<Value Name="ssid" Value="Microchip.NET - {nome do wifi} 5G"/>\n
 <Value Name="wlanMode" Value="0"/>\n
 <Value Name="authType" Value="2"/>\n
 <Value Name="cwmp_WLAN_BasicEncry" Value="0"/>\n
@@ -1206,7 +1206,7 @@ Declaro ainda, para os devidos fins, que tive pr√©vio acesso a todas as informa√
 <Value Name="rs2IpAddr" Value="0.0.0.0"/>\n
 <Value Name="rs2Password" Value=""/>\n
 <Value Name="wlanDisabled" Value="0"/>\n
-<Value Name="ssid" Value="MC NET - {nome do wifi} 2G"/>\n
+<Value Name="ssid" Value="Microchip.NET - {nome do wifi} 2G"/>\n
 <Value Name="wlanMode" Value="0"/>\n
 <Value Name="authType" Value="2"/>\n
 <Value Name="cwmp_WLAN_BasicEncry" Value="0"/>\n
