@@ -537,8 +537,8 @@ Declaro ainda, para os devidos fins, que tive pr√©vio acesso a todas as informa√
 <Value Name="NAPT" Value="1"/>\n
 <Value Name="ChannelMode" Value="2"/>\n
 <Value Name="BridgeType" Value="2"/>\n
-<Value Name="pppUser" Value="{UsuarioPPPoE}"/>\n
-<Value Name="pppPasswd" Value="{SenhaPPPoE}"/>\n
+<Value Name="pppUser" Value="{Usuario PPPoE}"/>\n
+<Value Name="pppPasswd" Value="{Senha PPPoE}"/>\n
 <Value Name="pppAuth" Value="0"/>\n
 <Value Name="pppACName" Value=""/>\n
 <Value Name="pppServiceName" Value=""/>\n
@@ -870,7 +870,7 @@ Declaro ainda, para os devidos fins, que tive pr√©vio acesso a todas as informa√
 <Value Name="rs2IpAddr" Value="0.0.0.0"/>\n
 <Value Name="rs2Password" Value=""/>\n
 <Value Name="wlanDisabled" Value="0"/>\n
-    <Value Name="ssid" Value="MC NET - {NomeWifi} 5G"/>\n
+    <Value Name="ssid" Value="MC NET - {nome do wifi} 5G"/>\n
 <Value Name="wlanMode" Value="0"/>\n
 <Value Name="authType" Value="2"/>\n
 <Value Name="cwmp_WLAN_BasicEncry" Value="0"/>\n
@@ -1206,7 +1206,7 @@ Declaro ainda, para os devidos fins, que tive pr√©vio acesso a todas as informa√
 <Value Name="rs2IpAddr" Value="0.0.0.0"/>\n
 <Value Name="rs2Password" Value=""/>\n
 <Value Name="wlanDisabled" Value="0"/>\n
-<Value Name="ssid" Value="MC NET - {NomeWifi} 2G"/>\n
+<Value Name="ssid" Value="MC NET - {nome do wifi} 2G"/>\n
 <Value Name="wlanMode" Value="0"/>\n
 <Value Name="authType" Value="2"/>\n
 <Value Name="cwmp_WLAN_BasicEncry" Value="0"/>\n
@@ -2013,9 +2013,9 @@ Declaro ainda, para os devidos fins, que tive pr√©vio acesso a todas as informa√
 </Config_Information_File_8671>\n`,
       
       campos: [
-        { chave: "NomeWifi", tipo: "texto" },
-        { chave: "UsuarioPPPoE", tipo: "texto" },
-        { chave: "SenhaPPPoE", tipo: "texto" }
+        { chave: "nome do wifi", tipo: "texto" },
+        { chave: "Usuario PPPoE", tipo: "texto" },
+        { chave: "Senha PPPoE", tipo: "texto" }
       ],
       tipo: "xmlDownload"
     }
