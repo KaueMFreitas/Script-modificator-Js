@@ -31,15 +31,13 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         { chave: "Taxa de adesão", tipo: "select", opcoes: ["Isento", "Pagou a taxa"] },
         { chave: "Plano", tipo: "select", opcoes: ["300MB", "500MB", "600Mb", "promocional de 400Mb", "promocional de 600Mb", "promocional de 800Mb"] },
         { chave: "Dia de vencimento", tipo: "select", opcoes: ["05", "10", "15"] },
-        {
-          chave: "Preço Taxa de adesão", tipo: "dependente", dependeDe: "Taxa de adesão", 
+        { chave: "Preço Taxa de adesão", tipo: "dependente", dependeDe: "Taxa de adesão", 
           valores: {
               "Pagou a taxa": "R$ 440,00", 
               "Isento": "R$ 520,00"
           }
         },
-        {
-          chave: "Plano contratado", tipo: "dependente", dependeDe: "Plano",
+        { chave: "Plano contratado", tipo: "dependente", dependeDe: "Plano",
           valores: {
             "300MB": "Microchip.NET 300 Mega",
             "500MB": "Microchip.NET 500 Mega",
@@ -49,8 +47,7 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
             "promocional de 800Mb": "Microchip.NET POWER 800 Mega"
           }
         },
-        {
-          chave: "Preço", tipo: "dependente", dependeDe: "Plano",
+        { chave: "Preço", tipo: "dependente", dependeDe: "Plano",
           valores: {
             "300MB": "R$ 89,90",
             "500MB": "R$ 109,90",
@@ -60,8 +57,7 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
             "promocional de 800Mb": "R$ 139,90"
           }
         },
-        {
-          chave: "Velocidade do plano", tipo: "dependente", dependeDe: "Plano contratado",
+        { chave: "Velocidade do plano", tipo: "dependente", dependeDe: "Plano contratado",
           valores: {
             "Microchip.NET 300 Mega": "300MB",
             "Microchip.NET 500 Mega": "500MB",
@@ -2018,6 +2014,23 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         { chave: "Senha PPPoE", tipo: "texto" }
       ],
       tipo: "xmlDownload"
+    },
+
+    { nome: "Termo de informação de data",
+      texto: `{Motivo} ficou agendada para o dia {data} em horário comercial entre 8:30 da manhã até as 16:30 (tarde).\n
+Para receber nosso técnico será necessário estar presente uma pessoa maior de 18 anos , com documentação em mãos Rg ou Habilitação.\n
+Obs: O técnico irá solicitar uma foto do documento para registro em sistema`,
+      campos: [
+        { chave: "Chamado", tipo: "select", opcoes: ["Instalação", "Mudança de endereço", "Troca de roteador"] },
+        { chave: "data", tipo: "texto" },
+        { chave: "Motivo", tipo: "dependente", dependeDe: "Chamado", 
+          valores: {
+            "Instalação": `A sua instalação`,
+            "Mudança de endereço": `A sua mudança de endereço`,
+            "Troca de roteador": `A sua troca de roteador`
+          }
+        }
+      ]
     }
   ]; 
 
