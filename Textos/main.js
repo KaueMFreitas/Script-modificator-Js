@@ -48,21 +48,41 @@ function renderForm(template) {
     inputsContainer.appendChild(input);
   });
 
-  // Adiciona lógica para campos dependentes
+ // Adiciona lógica para campos dependentes com controle de duplicação
   template.campos
-    .filter(campo => campo.tipo === "dependente")
-    .forEach(dep => {
-      const campoPai = camposMap[dep.dependeDe];
-      if (!campoPai) return;
+  .filter(campo => campo.tipo === "dependente")
+  .forEach(dep => {
+    const campoPai = camposMap[dep.dependeDe];
+    if (!campoPai) return;
 
-      campoPai.addEventListener("change", () => {
-        const valorPai = campoPai.value;
-        const valorDependente = dep.valores[valorPai];
-        if (valorDependente !== undefined) {
-          camposMap[dep.chave] = { value: valorDependente };
-        }
-      });
+    campoPai.addEventListener("change", () => {
+      const valorPai = campoPai.value;
+
+      // Verifica se já existe o input
+      const existingInput = document.querySelector(`[name="${dep.chave}"]`);
+      if (existingInput) {
+        const label = existingInput.previousElementSibling;
+        if (label?.tagName === "LABEL") label.remove();
+        existingInput.remove();
+        delete camposMap[dep.chave];
+      }
+
+      if (dep.chave === "Segundo endereço completo" && valorPai === "Segundo ponto") {
+        const label = document.createElement("label");
+        label.textContent = dep.chave;
+
+        const input = document.createElement("input");
+        input.name = dep.chave;
+
+        camposMap[dep.chave] = input;
+
+        inputsContainer.appendChild(label);
+        inputsContainer.appendChild(input);
+      } else if (dep.valores && dep.valores[valorPai] !== undefined) {
+        camposMap[dep.chave] = { value: dep.valores[valorPai] };
+      }
     });
+  });
 }
 
 function generateResult(template) {
@@ -81,6 +101,12 @@ function generateResult(template) {
   });
 
   let textoFinal = template.texto;
+  for (const [chave, valor] of Object.entries(respostas)) {
+    const regex = new RegExp(`{${chave}}`, "g");
+    textoFinal = textoFinal.replace(regex, valor);
+  }
+  
+  // Segunda rodada (para variáveis dentro de valores dependentes que também usam chaves)
   for (const [chave, valor] of Object.entries(respostas)) {
     const regex = new RegExp(`{${chave}}`, "g");
     textoFinal = textoFinal.replace(regex, valor);

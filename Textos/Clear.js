@@ -5,7 +5,7 @@ const templates = [
     { nome: "Termos de aceite de contrato",
       texto: `TERMO DE ACEITE DE CONTRATO.
   
-    De um lado, {Nome completo}, e-mail {E-Mail do cliente}, portador(a) do CPF {CPF do cliente}, com endereço {Endereço completo}, denominada por CONTRATANTE.
+    De um lado, {Nome completo}, e-mail {E-Mail do cliente}, portador(a) do CPF {CPF do cliente}, com endereço {Endereço completo}, {Complemento segundo ponto} denominada por CONTRATANTE.
 
     De outro, Microchip.NET Fibra Óptica LTDA, endereço eletrônico sac@microchipnet.com.br, registrada sob o número de CNPJ: 11.062.024/0001-91, localizada no endereço comercial Av. Senador Salgado Filho 277 - Parque São Vicente - SP, denominada por CONTRATADA.
 
@@ -23,7 +23,14 @@ Declaro ainda que os documentos apresentados para formalização deste contrato 
 Declaro estar ciente que a assinatura deste instrumento representa expressa concordância aos termos e condições do "CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA", registrado junto ao Cartório da Comarca de Santos, sob o n.º 723.447 de 16/06/2020, que juntamente com esse TERMO DE CONTRATAÇÃO formam um só instrumento de direito, tendo lido e entendido claramente os termos e condições ajustadas para esta contratação. 
 Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informações relativas ao "CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA", bem como ao Plano de Serviço por mim contratado, devidamente especificado neste TERMO DE CONTRATAÇÃO.`,
   
-      campos: [
+      campos: [ 
+        { chave: "Ponto de instalação", tipo: "select", opcoes: ["Primeiro ponto", "Segundo ponto"] },
+        { chave: "Segundo endereço completo", tipo: "dependente", dependeDe: "Ponto de instalação", 
+          valores: {
+            "Primeiro ponto": "",
+            "Segundo ponto": "" 
+          }
+        },
         { chave: "Nome completo", tipo: "texto" },
         { chave: "E-Mail do cliente", tipo: "texto" },
         { chave: "CPF do cliente", tipo: "texto" },
@@ -66,6 +73,9 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
             "Microchip.NET MASTER 600 Mega": "600Mb",
             "Microchip.NET POWER 800 Mega": "800Mb"
           }
+        },
+        { chave: "Complemento segundo ponto", tipo: "dependente", dependeDe: "Ponto de instalação",
+          valores: { "Segundo ponto": "e endereço de instalação do 2° ponto na {Segundo endereço completo}, " }
         }
       ]
     },
