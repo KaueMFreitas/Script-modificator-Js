@@ -36,12 +36,12 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         { chave: "CPF do cliente", tipo: "texto" },
         { chave: "Endereço completo", tipo: "texto" },
         { chave: "Taxa de adesão", tipo: "select", opcoes: ["Isento", "Pagou a taxa"] },
-        { chave: "Plano", tipo: "select", opcoes: ["300MB", "500MB", "600Mb", "promocional de 400Mb", "promocional de 600Mb", "promocional de 800Mb"] },
+        { chave: "Plano", tipo: "select", opcoes: ["300Mb + 100Mb", "500Mb + 100Mb", "600Mb + 200Mb"] },
         { chave: "Dia de vencimento", tipo: "select", opcoes: ["05", "10", "15"] },
         { chave: "Preço Taxa de adesão", tipo: "dependente", dependeDe: "Taxa de adesão", 
           valores: {
               "Pagou a taxa": "R$ 440,00", 
-              "Isento": "R$ 520,00"
+              "Isento": "R$ 510,00"
           }
         },
         { chave: "Plano contratado", tipo: "dependente", dependeDe: "Plano",
@@ -49,9 +49,9 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
             "300MB": "Microchip.NET 300 Mega",
             "500MB": "Microchip.NET 500 Mega",
             "600Mb": "Microchip.NET 600 Mega",
-            "promocional de 400Mb": "Microchip.NET PLUS 400 Mega",
-            "promocional de 600Mb": "Microchip.NET MASTER 600 Mega",
-            "promocional de 800Mb": "Microchip.NET POWER 800 Mega"
+            "300Mb + 100Mb": "Microchip.NET PLUS 400 Mega",
+            "500Mb + 100Mb": "Microchip.NET MASTER 600 Mega",
+            "600Mb + 200Mb": "Microchip.NET POWER 800 Mega"
           }
         },
         { chave: "Preço", tipo: "dependente", dependeDe: "Plano",
@@ -59,9 +59,9 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
             "300MB": "R$ 89,90",
             "500MB": "R$ 109,90",
             "600Mb": "R$ 139,90",
-            "promocional de 400Mb": "R$ 89,90 por 12 meses após esse periodo passará a ser R$ 94,90",
-            "promocional de 600Mb": "R$ 109,90 por 12 meses após esse periodo passará a ser R$ 114,90",
-            "promocional de 800Mb": "R$ 139,90"
+            "300Mb + 100Mb": "R$ 89,90 por 12 meses após esse periodo passará a ser R$ 94,90",
+            "500Mb + 100Mb": "R$ 109,90 por 12 meses após esse periodo passará a ser R$ 114,90",
+            "600Mb + 200Mb": "R$ 139,90"
           }
         },
         { chave: "Velocidade do plano", tipo: "dependente", dependeDe: "Plano contratado",
@@ -80,7 +80,78 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
       ]
     },
 
-    { nome: "Configurar Sheroline",
+     { nome: "Termos da troca de titularidade",
+      texto: `TERMO DE ACEITE DE CONTRATO.    
+   
+De um lado, {Nome} , e-mail {E-mail}, portador(a) do CPF: {CPF} , com endereço de Instalação: {Endereço} denominada por CONTRATANTE.    
+   
+De outro, Microchip.NET Fibra Óptica LTDA, endereço eletrônico sac@microchipnet.com.br, registrada sob o número de CNPJ: 11.062.024/0001-91, localizada no endereço comercial Av. Senador Salgado Filho 277 - Parque São Vicente - SP, denominada por CONTRATADA.    
+   
+   
+Constitui objeto do presente TERMO DE CONTRATAÇÃO a prestação de Serviços de Comunicação Multimídia pela CONTRATADA em favor do CONTRATANTE, no intuito de viabilizar a conexão do CONTRATANTE à internet, de acordo com as condições previstas no instrumento "CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA".    
+   
+O CONTRATANTE declara, por meio da aceitação deste termo, que foi informado quanto ao tratamento de dados que será realizado pela CONTRATADA, nos termos da Lei n 13.709/2018. Declara também ser de manifestação livre, informada e inequívoca a autorização do tratamento de seus dados pessoas conforme o detalhamento contido no contrato. O CONTRATANTE declare ciência de que, todos os dados coletados pela contratada são necessários para a prestação dos serviços contratados.    
+   
+INFORMAÇÕES CONTRATUAL:    
+   
+CONTRATO : Cliente Assumiu titularidade de {Nome do antigo cliente} CPF: {CPF do antigo cliente}. Plano {Plano contratado} com valor de mensalidade de{Preço} com vencimento no dia {Dia de vencimento} sujeito a correções monetárias anuais, com velocidade de download de {Velocidade do plano} e a velocidade de upload sendo 50% do plano, com prazo máximo de instalação de 05 dias úteis, tendo garantia da banda contratada de 100% do plano, tendo os equipamentos que serão disponibilizados sob o regime de COMODATO e sabendo que o IP disponibilizado será dinâmico, podendo ser IP Público ou CGnateado. É sabido também que a forma de pagamento é via Boleto Bancário e está autorizado o envio única e exclusivamente através de meios eletrônicos como SAC Web, Aplicativo, atendimento no Whatsapp e e-mail, tendo ciência de que o atendimento do setor técnico ocorre de segunda à domingo, das 8h às 00h, tendo o setor financeiro e comercial o horário de atendimento diferenciado das 8h às 18h, não funcionando aos domingos e aos sábado funcionando até às 16h.    
+   
+Declaro, para os devidos fins, que são corretos os dados cadastrais e informações por mim prestadas neste instrumento. Declaro ainda que os documentos apresentados para formalização deste contrato e as cópias dos documentos entregues a CONTRATADA pertencem a minha pessoa, tendo ciência das sanções civis e criminais caso prestar declarações falsas, entregar documentos falsos e me passar por outrem.    
+Declaro estar ciente que a assinatura deste instrumento representa expressa concordância aos termos e condições do "CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA", registrado junto ao Cartório da Comarca de Santos, sob o n.º 723.447 de 16/06/2020, que juntamente com esse TERMO DE CONTRATAÇÃO formam um só instrumento de direito, tendo lido e entendido claramente os termos e condições ajustadas para esta contratação.    
+Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informações relativas ao "CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA", bem como ao Plano de Serviço por mim contratado, devidamente especificado neste TERMO DE CONTRATAÇÃO.`,
+  
+      campos: [ 
+        { chave: "Nome", tipo: "texto" },
+        { chave: "E-mail", tipo: "texto" },
+        { chave: "CPF", tipo: "texto" },
+        { chave: "Endereço", tipo: "texto" },
+        { chave: "Nome do antigo cliente", tipo: "texto" },
+        { chave: "CPF do antigo cliente", tipo: "texto" },
+        { chave: "Plano", tipo: "select", opcoes: ["300Mb + 100Mb", "500Mb + 100Mb", "600Mb + 200Mb"] },
+        { chave: "Dia de vencimento", tipo: "select", opcoes: ["05", "10", "15"] },
+        { chave: "Preço Taxa de adesão", tipo: "dependente", dependeDe: "Taxa de adesão", 
+          valores: {
+            "Pagou a taxa": "R$ 440,00", 
+            "Isento": "R$ 510,00"
+          }
+        },
+        { chave: "Plano contratado", tipo: "dependente", dependeDe: "Plano",
+          valores: {
+            "300MB": "Microchip.NET 300 Mega",
+            "500MB": "Microchip.NET 500 Mega",
+            "600Mb": "Microchip.NET 600 Mega",
+            "300Mb + 100Mb": "Microchip.NET PLUS 400 Mega",
+            "500Mb + 100Mb": "Microchip.NET MASTER 600 Mega",
+            "600Mb + 200Mb": "Microchip.NET POWER 800 Mega"
+          }
+        },
+        { chave: "Preço", tipo: "dependente", dependeDe: "Plano",
+          valores: {
+            "300MB": "R$ 89,90",
+            "500MB": "R$ 109,90",
+            "600Mb": "R$ 139,90",
+            "300Mb + 100Mb": "R$ 89,90 por 12 meses após esse periodo passará a ser R$ 94,90",
+            "500Mb + 100Mb": "R$ 109,90 por 12 meses após esse periodo passará a ser R$ 114,90",
+            "600Mb + 200Mb": "R$ 139,90"
+          }
+        },
+        { chave: "Velocidade do plano", tipo: "dependente", dependeDe: "Plano contratado",
+          valores: {
+            "Microchip.NET 300 Mega": "300MB",
+            "Microchip.NET 500 Mega": "500MB",
+            "Microchip.NET 600 Mega": "600Mb",
+            "Microchip.NET PLUS 400 Mega": "400Mb",
+            "Microchip.NET MASTER 600 Mega": "600Mb",
+            "Microchip.NET POWER 800 Mega": "800Mb"
+          }
+        },
+        { chave: "Complemento segundo ponto", tipo: "dependente", dependeDe: "Ponto de instalação",
+          valores: { "Segundo ponto": "e endereço de instalação do 2° ponto na {Segundo endereço completo}, " }
+        }
+      ]
+    },
+
+    { nome: "Configurar Sheroline (Não usar)",
       texto: `<Config_Information_File_8671>\n 
 <Value Name="WAN_MODE" Value="7"/>\n
 <Value Name="LAN_IP_ADDR" Value="192.168.1.1"/>\n
