@@ -33,7 +33,7 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         },
         { chave: "Nome completo", tipo: "texto" },
         { chave: "E-Mail do cliente", tipo: "texto" },
-        { chave: "CPF do cliente", tipo: "texto" },asd
+        { chave: "CPF do cliente", tipo: "texto" },
         { chave: "Endereço completo", tipo: "texto" },
         { chave: "Taxa de adesão", tipo: "select", opcoes: ["Isento", "Pagou a taxa"] },
         { chave: "Plano", tipo: "select", opcoes: ["300Mb", "500Mb", "600Mb", "300Mb + 100Mb", "500Mb + 100Mb", "600Mb + 200Mb"] },
