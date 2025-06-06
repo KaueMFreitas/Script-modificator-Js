@@ -33,10 +33,10 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         },
         { chave: "Nome completo", tipo: "texto" },
         { chave: "E-Mail do cliente", tipo: "texto" },
-        { chave: "CPF do cliente", tipo: "texto" },
+        { chave: "CPF do cliente", tipo: "texto" },asd
         { chave: "Endereço completo", tipo: "texto" },
         { chave: "Taxa de adesão", tipo: "select", opcoes: ["Isento", "Pagou a taxa"] },
-        { chave: "Plano", tipo: "select", opcoes: ["300Mb + 100Mb", "500Mb + 100Mb", "600Mb + 200Mb"] },
+        { chave: "Plano", tipo: "select", opcoes: ["300Mb", "500Mb", "600Mb", "300Mb + 100Mb", "500Mb + 100Mb", "600Mb + 200Mb"] },
         { chave: "Dia de vencimento", tipo: "select", opcoes: ["05", "10", "15"] },
         { chave: "Preço Taxa de adesão", tipo: "dependente", dependeDe: "Taxa de adesão", 
           valores: {
@@ -46,8 +46,8 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         },
         { chave: "Plano contratado", tipo: "dependente", dependeDe: "Plano",
           valores: {
-            "300MB": "Microchip.NET 300 Mega",
-            "500MB": "Microchip.NET 500 Mega",
+            "300Mb": "Microchip.NET 300 Mega",
+            "500Mb": "Microchip.NET 500 Mega",
             "600Mb": "Microchip.NET 600 Mega",
             "300Mb + 100Mb": "Microchip.NET PLUS 400 Mega",
             "500Mb + 100Mb": "Microchip.NET MASTER 600 Mega",
@@ -56,8 +56,8 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         },
         { chave: "Preço", tipo: "dependente", dependeDe: "Plano",
           valores: {
-            "300MB": "R$ 89,90",
-            "500MB": "R$ 109,90",
+            "300Mb": "R$ 89,90",
+            "500Mb": "R$ 109,90",
             "600Mb": "R$ 139,90",
             "300Mb + 100Mb": "R$ 89,90 por 12 meses após esse periodo passará a ser R$ 94,90",
             "500Mb + 100Mb": "R$ 109,90 por 12 meses após esse periodo passará a ser R$ 114,90",
@@ -66,8 +66,8 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         },
         { chave: "Velocidade do plano", tipo: "dependente", dependeDe: "Plano contratado",
           valores: {
-            "Microchip.NET 300 Mega": "300MB",
-            "Microchip.NET 500 Mega": "500MB",
+            "Microchip.NET 300 Mega": "300Mb",
+            "Microchip.NET 500 Mega": "500Mb",
             "Microchip.NET 600 Mega": "600Mb",
             "Microchip.NET PLUS 400 Mega": "400Mb",
             "Microchip.NET MASTER 600 Mega": "600Mb",
@@ -107,7 +107,7 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         { chave: "Endereço", tipo: "texto" },
         { chave: "Nome do antigo cliente", tipo: "texto" },
         { chave: "CPF do antigo cliente", tipo: "texto" },
-        { chave: "Plano", tipo: "select", opcoes: ["300Mb + 100Mb", "500Mb + 100Mb", "600Mb + 200Mb"] },
+        { chave: "Plano", tipo: "select", opcoes: ["300Mb", "500Mb", "600Mb", "300Mb + 100Mb", "500Mb + 100Mb", "600Mb + 200Mb"] },
         { chave: "Dia de vencimento", tipo: "select", opcoes: ["05", "10", "15"] },
         { chave: "Preço Taxa de adesão", tipo: "dependente", dependeDe: "Taxa de adesão", 
           valores: {
@@ -117,8 +117,8 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         },
         { chave: "Plano contratado", tipo: "dependente", dependeDe: "Plano",
           valores: {
-            "300MB": "Microchip.NET 300 Mega",
-            "500MB": "Microchip.NET 500 Mega",
+            "300Mb": "Microchip.NET 300 Mega",
+            "500Mb": "Microchip.NET 500 Mega",
             "600Mb": "Microchip.NET 600 Mega",
             "300Mb + 100Mb": "Microchip.NET PLUS 400 Mega",
             "500Mb + 100Mb": "Microchip.NET MASTER 600 Mega",
@@ -127,8 +127,8 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         },
         { chave: "Preço", tipo: "dependente", dependeDe: "Plano",
           valores: {
-            "300MB": "R$ 89,90",
-            "500MB": "R$ 109,90",
+            "300Mb": "R$ 89,90",
+            "500Mb": "R$ 109,90",
             "600Mb": "R$ 139,90",
             "300Mb + 100Mb": "R$ 89,90 por 12 meses após esse periodo passará a ser R$ 94,90",
             "500Mb + 100Mb": "R$ 109,90 por 12 meses após esse periodo passará a ser R$ 114,90",
@@ -137,8 +137,8 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
         },
         { chave: "Velocidade do plano", tipo: "dependente", dependeDe: "Plano contratado",
           valores: {
-            "Microchip.NET 300 Mega": "300MB",
-            "Microchip.NET 500 Mega": "500MB",
+            "Microchip.NET 300 Mega": "300Mb",
+            "Microchip.NET 500 Mega": "500Mb",
             "Microchip.NET 600 Mega": "600Mb",
             "Microchip.NET PLUS 400 Mega": "400Mb",
             "Microchip.NET MASTER 600 Mega": "600Mb",
