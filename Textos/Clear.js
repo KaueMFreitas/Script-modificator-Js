@@ -21,7 +21,11 @@ const templates = [
 Declaro, para os devidos fins, que são corretos os dados cadastrais e informações por mim prestadas neste instrumento. 
 Declaro ainda que os documentos apresentados para formalização deste contrato e as cópias dos documentos entregues a CONTRATADA pertencem a minha pessoa, tendo ciência das sanções civis e criminais caso prestar declarações falsas, entregar documentos falsos e me passar por outrem. 
 Declaro estar ciente que a assinatura deste instrumento representa expressa concordância aos termos e condições do "CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA", registrado junto ao Cartório da Comarca de Santos, sob o n.º 723.447 de 16/06/2020, que juntamente com esse TERMO DE CONTRATAÇÃO formam um só instrumento de direito, tendo lido e entendido claramente os termos e condições ajustadas para esta contratação. 
-Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informações relativas ao "CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA", bem como ao Plano de Serviço por mim contratado, devidamente especificado neste TERMO DE CONTRATAÇÃO.`,
+Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informações relativas ao "CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA", bem como ao Plano de Serviço por mim contratado, devidamente especificado neste TERMO DE CONTRATAÇÃO.
+
+    Você concorda com os termos acima?
+    ( ) Sim
+    ( ) Não`,
   
       campos: [ 
         { chave: "Ponto de instalação", tipo: "select", opcoes: ["Primeiro ponto", "Segundo ponto"] },
@@ -98,7 +102,11 @@ CONTRATO : Cliente Assumiu titularidade de {Nome do antigo cliente} CPF: {CPF do
    
 Declaro, para os devidos fins, que são corretos os dados cadastrais e informações por mim prestadas neste instrumento. Declaro ainda que os documentos apresentados para formalização deste contrato e as cópias dos documentos entregues a CONTRATADA pertencem a minha pessoa, tendo ciência das sanções civis e criminais caso prestar declarações falsas, entregar documentos falsos e me passar por outrem.    
 Declaro estar ciente que a assinatura deste instrumento representa expressa concordância aos termos e condições do "CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA", registrado junto ao Cartório da Comarca de Santos, sob o n.º 723.447 de 16/06/2020, que juntamente com esse TERMO DE CONTRATAÇÃO formam um só instrumento de direito, tendo lido e entendido claramente os termos e condições ajustadas para esta contratação.    
-Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informações relativas ao "CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA", bem como ao Plano de Serviço por mim contratado, devidamente especificado neste TERMO DE CONTRATAÇÃO.`,
+Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informações relativas ao "CONTRATO DE PRESTAÇÃO DE SERVIÇOS DE COMUNICAÇÃO MULTIMÍDIA", bem como ao Plano de Serviço por mim contratado, devidamente especificado neste TERMO DE CONTRATAÇÃO.
+    
+Você concorda com os termos acima?
+    ( ) Sim
+    ( ) Não`,
   
       campos: [ 
         { chave: "Nome", tipo: "texto" },
@@ -2100,7 +2108,11 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
     { nome: "Termo de informação de data",
       texto: `{Motivo} ficou agendada para o dia {data} em horário comercial entre 8:30 da manhã até as 16:30 (tarde).\n
 Para receber nosso técnico será necessário estar presente uma pessoa maior de 18 anos , com documentação em mãos Rg ou Habilitação.\n
-Obs: O técnico irá solicitar uma foto do documento para registro em sistema`,
+Obs: O técnico irá solicitar uma foto do documento para registro em sistema
+
+Você concorda com os termos acima?
+    ( ) Sim
+    ( ) Não`,
       campos: [
         { chave: "Chamado", tipo: "select", opcoes: ["Instalação", "Mudança de endereço", "Troca de roteador"] },
         { chave: "data", tipo: "texto" },
