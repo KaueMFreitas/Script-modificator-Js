@@ -68,14 +68,14 @@ Declaro ainda, para os devidos fins, que tive prévio acesso a todas as informa�
             "600Mb + 200Mb": "R$ 139,90"
           }
         },
-        { chave: "Velocidade do plano", tipo: "dependente", dependeDe: "Plano contratado",
+        { chave: "Velocidade do plano", tipo: "dependente", dependeDe: "Plano",
           valores: {
-            "Microchip.NET 300 Mega": "300Mb",
-            "Microchip.NET 500 Mega": "500Mb",
-            "Microchip.NET 600 Mega": "600Mb",
-            "Microchip.NET PLUS 400 Mega": "400Mb",
-            "Microchip.NET MASTER 600 Mega": "600Mb",
-            "Microchip.NET POWER 800 Mega": "800Mb"
+            "300Mb": "300Mbps",
+            "500Mb": "500Mbps",
+            "600Mb": "600Mbps",
+            "300Mb + 100Mb": "400Mbps",
+            "500Mb + 100Mb": "600Mbps",
+            "600Mb + 200Mb": "800Mbps"
           }
         },
         { chave: "Complemento segundo ponto", tipo: "dependente", dependeDe: "Ponto de instalação",
