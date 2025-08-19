@@ -3,39 +3,38 @@ const templates = [
   { nome: "- Escolha um Script -" },
 
     { nome: "Termos de aceite de contrato",
-      texto: `TERMO DE ACEITE DE CONTRATO
+      texto: `*TERMO DE ACEITE DE CONTRATO* 
 
-De um lado, {Nome completo}, e-mail {E-Mail do cliente}, CPF {CPF do cliente}, endereço {Endereço completo}, {Complemento segundo ponto} denominado CONTRATANTE.
+De um lado, {Nome completo}, e-mail {E-Mail do cliente}, CPF {CPF do cliente}, endereço {Endereço completo}, {Complemento segundo ponto}denominado *CONTRATANTE.*
 
-De outro, Microchip.NET Fibra Óptica LTDA, e-mail sac@microchipnet.com.br, CNPJ 11.062.024/0001-91, sede na Av. Senador Salgado Filho 277 - Parque São Vicente - SP, denominada CONTRATADA.
+De outro, Microchip.NET Fibra Óptica LTDA, e-mail sac@microchipnet.com.br, CNPJ 11.062.024/0001-91, sede na Av. Senador Salgado Filho 277 - Parque São Vicente - SP, denominada *CONTRATADA.*
 
-Objeto: prestação de Serviços de Comunicação Multimídia para conexão do CONTRATANTE à internet, conforme condições do “Contrato de Prestação de Serviços de Comunicação Multimídia”.
+*Objeto:* prestação de Serviços de Comunicação Multimídia para conexão do CONTRATANTE à internet, conforme condições do “Contrato de Prestação de Serviços de Comunicação Multimídia”.
 
-O CONTRATANTE declara ter ciência do tratamento de dados pela CONTRATADA, nos termos da Lei 13.709/2018, autorizando-o de forma livre e inequívoca, bem como de que tais dados são necessários à execução do serviço.
+O *CONTRATANTE* declara estar ciente do tratamento de dados feito pela CONTRATADA, nos termos da Lei 13.709/2018, autorizando-o de forma livre e clara, e reconhece que esses dados são necessários para a execução do serviço.
 
-Informações contratuais:
+*INFOMAÇÕES CONTRATUAIS:*
 
-Fidelidade:  12 (doze) meses, sendo o valor da multa por quebra contratual proporcional a {Preço Taxa de adesão}, calculado com base nos meses restantes do período de fidelização. Caso ocorra a rescisão contratual, por solicitação do CLIENTE, antes de completado o referido período
+*FIDELIDADE:* 12 (doze) meses, sendo o valor da multa por quebra contratual proporcional a {Preço Taxa de adesão}, calculado com base nos meses restantes do período de fidelização. Caso ocorra o cancelamento por solicitação do CLIENTE antes do término do período, será aplicada a multa proporcional.
 
-Mudança de endereço: Em caso de solicitação de mudança de endereço antes de completados 06 (seis) meses de vigência contratual, o CONTRATANTE estará sujeito à cobrança de uma taxa referente à prestação do serviço de remanejamento da conexão. O valor da taxa será definido conforme a tabela vigente na data da solicitação. Caso a mudança de endereço ocorra após o período de 06 (seis) meses de contrato, poderá ser concedida isenção da referida taxa, condicionada à renovação automática do prazo de fidelidade por mais 12 (doze) meses. Em eventual nova solicitação de mudança de endereço ou rescisão contratual dentro desse novo período, será cobrado o valor integral da taxa de R$ 120,00 (cento e vinte reais), além da multa proporcional, quando aplicável.
+*MUDANÇA DE ENDEREÇO:* Se o cliente pedir a mudança de endereço antes de completar 6 (seis) meses de contrato, será cobrada uma taxa para o serviço de remanejamento da conexão, cujo valor seguirá a tabela vigente na data do pedido. Caso a mudança de endereço aconteça depois desse período de 6 (seis) meses, essa taxa poderá ser isenta, desde que o contrato seja renovado automaticamente por mais 12 (doze) meses. Em situações em que não houver viabilidade técnica no novo endereço, o cliente deverá pagar a multa contratual, a não ser que apresente um documento que comprove o novo endereço, podendo assim ser dispensado do pagamento. Se houver uma nova solicitação de mudança de endereço ou cancelamento dentro desse novo período, será cobrada a taxa integral de R$ 120,00 (cento e vinte reais), além da multa proporcional, quando aplicável.
 
-Plano: {Plano contratado} com valor de mensalidade de {Preço}, com vencimento no {Dia de vencimento} sujeito a correções monetárias anuais, com velocidade de download de {Velocidade do plano} e a velocidade de upload sendo 50% do plano, com prazo máximo de instalação de 05 dias úteis, tendo garantia da banda contratada de 100% do plano, tendo os equipamentos que serão disponibilizados sob o regime de COMODATO e sabendo que o IP disponibilizado será dinâmico, podendo ser IP Público ou CGnateado.
+*PLANO:* {Plano contratado} com valor de mensalidade de {Preço}, com vencimento no {Dia de vencimento}, sujeito a correções anuais. Velocidade de download de {Velocidade do plano} e upload de 50% do plano. Prazo máximo de instalação de 05 dias úteis. A banda contratada tem garantia de 100% da velocidade. Os equipamentos são cedidos em regime de comodato. O IP será dinâmico, podendo ser público ou CGNAT.
 
-Pagamento: A fatura será enviada exclusivamente por canais eletrônicos (SAC Web, aplicativo, WhatsApp ou e-mail).
+*PAGAMENTO:* A fatura será enviada exclusivamente por canais eletrônicos (SAC Web, aplicativo, WhatsApp ou e-mail).
 
-Atendimento SAC: Departamentos técnico, comercial e financeiro de segunda a domingo, 08h às 00h.
+*ATENDIMENTO SAC:* Técnico, comercial e financeiro: de segunda a domingo, das 08h às 00h.
 
-Atendimento Técnico Presencial: De segunda a domingo, 08h às 21h.
+*ATENDIMENTO TÉCNICO PRESENCIAL:* De segunda a domingo, das 08h às 21h.
 
-O CONTRATANTE declara que os dados informados e documentos apresentados são verdadeiros, ciente das sanções civis e criminais em caso de falsidade.
+O *CONTRATANTE* declara que os dados informados e documentos apresentados são verdadeiros, estando ciente das penalidades em caso de falsidade.
+O *CONTRATANTE* confirma que teve acesso prévio a todas as informações do contrato e do plano descrito neste termo.
 
-A assinatura deste termo implica concordância com o “Contrato de Prestação de Serviços de Comunicação Multimídia” registrado no Cartório de Santos sob nº 723.447, de 16/06/2020, que integra este documento.
-
-O CONTRATANTE confirma ter tido prévio acesso a todas as informações do contrato e do plano aqui descrito.
+*A assinatura deste termo significa concordância com o “Contrato de Prestação de Serviços de Comunicação Multimídia”, registrado no Cartório de Santos sob nº 723.447, de 16/06/2020, que faz parte deste documento.*
 
 Você concorda com os termos acima?
-( ) Sim
-( ) Não`,
+*( ) SIM*
+*( ) NÃO*`,
   
       campos: [ 
         { chave: "Ponto de instalação", tipo: "select", opcoes: ["Primeiro ponto", "Segundo ponto"] },
